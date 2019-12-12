@@ -307,6 +307,7 @@ export default class AwsCloudWatchLogsDatasource extends DataSourceApi<AwsCloudW
         },
       })
       .then(r => {
+        console.log(r.data);
         return this.transformSuggestDataFromTable(r.data);
       });
   }
